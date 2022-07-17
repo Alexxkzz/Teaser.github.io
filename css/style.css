@@ -1,0 +1,1067 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* fonts */
+@font-face {
+    font-family: poppinsRegular;
+    src: url(../Fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: poppinsBold;
+     src: url(../Fonts/Poppins/Poppins-Bold.ttf); 
+}
+@font-face {
+    font-family: poppinsSemibold;
+    src: url(../Fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+h1{
+    font-family: poppinsBold;
+}
+
+h2,h3,h4,h5{
+    font-family: poppinsSemibold;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+p,
+a{
+    font-family: poppinsRegular;
+}
+
+/* Variables */
+:root{
+    --nav-link-color: #0c426e;
+    --hero-section-background-color:#fafafa;
+    --button-hover-bg-color:#0c426e;
+    --box-shadow: -10px -10px 5px 0px rgba(249,249,249,0.75); 
+    --overlay-bg-color:#0c426e;
+    --span-border-color:#0c426e;
+    --footer-bg-color:#252525;
+    --footer-links-color:#929292;
+    --box-shadow-helper:10px 10px 5px 0px rgba(249,249,249,0.75), -10px -10px 5px 0px rgba(249,249,249,0.75);
+}
+
+/* reusable classes */
+.unipadding{
+    padding: 0 10rem;
+}
+
+.button{
+    padding: 10px 50px;
+    background-color: black;
+    color: var(--hero-section-background-color);
+    transition: all .1s linear;
+}
+.button:hover{
+    background-color: var(--button-hover-bg-color);
+}
+
+.commonHeading{
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem !important;
+}
+.commonHeading::after{
+    content: "";
+    width: 20%;
+    border-bottom: 5px solid #252525;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-20%);
+    text-align: center;
+}
+.color{
+    color:#0c426e;
+}
+
+/* header */
+nav{
+    text-align: center;
+}
+nav ul{
+    margin: 2rem 0;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 2rem;
+    
+}
+nav ul li a{
+    font-size: 1rem;
+    font-family: poppinsRegular;
+    color: var(--nav-link-color);
+}
+nav ul .fa-solid{
+    margin-right: 1rem;
+}
+
+/* hero section */
+.heroSection{
+    background-color: var(--hero-section-background-color);
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+}
+.headingDiv,
+.heroImageDiv{
+    width: 50%;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+.headingDiv h1{
+    font-size: 3.3rem;
+    margin-top: 3rem;
+}
+.headingDiv p{
+    font-size: .8rem;
+}
+.headingDiv a{
+    margin-top: 2rem;
+}
+#contactUsLink{
+    margin-left: 2rem;
+}
+.heroImageDiv img{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+/* Our Services Section */
+.ourServicesSection{
+    text-align: center;
+    margin-top: 3rem;
+}
+.ourServicesSection h2{
+    font-size: 2.5rem;
+}
+.servicesParent{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.servies{
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+.serviesInfoDiv{
+    text-align: center;
+}
+.serviesInfoDiv h3{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.servies div{
+    height: 306px;
+}
+.serviesInfoDiv p{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.serviesInfoDiv a{
+    font-size: 1rem;
+    color: black;
+}
+.serviceImageDiv img{
+    width: 100%;
+    height: 306px;
+}
+#serviceOne{
+    box-shadow: var(--box-shadow);
+}
+#serviceTwo{
+    box-shadow: 0px 10px 5px 0px rgba(249,249,249,0.75);
+}
+#serviceThree{
+    box-shadow: 10px -10px 5px 0px rgba(249,249,249,0.75);
+}
+
+/* Best Quality Section */
+.bestQuality{
+    margin-top: 4rem;
+    text-align: center;
+    transition: all .7s linear;
+}
+.bestQuality h2{
+    font-size: 2.5rem;
+}
+.parallexEffect{
+    background-image: url(../images/serviceTwo.png);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 2rem;
+    position: relative;
+    z-index: -10;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--overlay-bg-color);
+    opacity: 0.7;
+    z-index: -3;
+}
+.cleanDiv {
+    padding-top: 4rem;
+    
+}
+.cleanDiv h3{
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.cleanDiv p{
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 5rem;
+}
+#qualitySectionLink{
+    background-color: #ffffff;
+    color: black;
+    margin-bottom: 6rem;
+    position: relative;
+}
+.top{
+    z-index: 5; 
+}
+
+/* why choose us section */
+.chooseUs{
+    text-align: center;
+    margin-top: 5rem;
+}
+.chooseUs h2{
+    font-size: 2.5rem;
+}
+.whyChooseUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+.whyChooseUs div{
+    width: 30%;
+    padding: 1rem;
+    box-shadow: var(--box-shadow-helper);
+}
+.whyChooseUs span{
+    border: 1px solid var(--span-border-color);
+    border-radius: 50%;
+    padding: .6rem;
+    font-size: 1.2rem;
+    color: var(--span-border-color);
+}
+.whyChooseUs h3{
+    font-size: 1.2rem;
+    color: var(--span-border-color);
+    display: inline-block;
+    margin-left: .5rem;
+}
+.whyChooseUs p{
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: black;
+}
+
+/* testimonials */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .testimonial{
+    margin-top: 5rem;
+  }
+  .teastimonialHeading{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .container{
+    margin-top: 3rem;
+  }
+  .review{
+    margin: 5rem 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: var(--box-shadow-helper);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .review figure{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .review figure img{
+    
+    width: 50%;
+    height: 100%;
+  }
+  .review div{
+    width: 70%;
+    text-align: left;
+  }
+  .pinfo{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+  .pname{
+    font-size: 1.4rem;
+  }
+  .profile{
+    font-size: .6rem;
+  }
+/* footer */
+footer{
+    background-color: var(--footer-bg-color);
+    margin-top: 4rem;
+}
+.importantLinks{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-top: 13rem;
+
+}
+.importantLinks div{
+    width: 25%;
+}
+.importantLinks div h2{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+.importantLinks div ul li{
+    list-style: none;
+    color: var(--footer-links-color);
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+.importantLinks div ul li a:hover{
+    color: #fafafa;
+}
+.importantLinks div ul li a{
+    color: var(--footer-links-color);
+}
+#impLink li i{
+    margin-right: .8rem;
+}
+input[type="email"]{
+    padding: .3rem 0;
+    padding-left: 1rem;
+    font-family: poppinsRegular;
+    font-size: .6rem;
+    width: 100%;
+}
+input[type="submit"]{
+    color: #fafafa;
+    background-color: var(--nav-link-color);
+    border: none;
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+    font-size: .6rem;
+}
+.socials{
+    padding: 2rem 0;
+    text-align: center;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin,
+.fa-instagram{
+    color: #fafafa;
+    font-size: 1.5rem;
+    margin: 0 .4rem;
+}
+
+.copyright{
+    padding: 2rem 0;
+    text-align: center;
+    color: #fafafa;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 1300px) {
+    /* reusable classes */
+    .commonHeading{
+        font-size: 2.4rem !important;
+    }
+    /* header */
+    /* hero sectoin */
+    .headingDiv h1 {
+        font-size: 2.9rem;
+    }
+
+    /* Footer */
+    .importantLinks div ul li {
+        font-size: .8rem;
+    }
+
+    
+}
+
+@media (max-width: 1200px) {
+    /* reusable classes */
+    .commonHeading{
+        font-size: 2.3rem !important;
+    }
+    /* Header */
+    nav ul li a {
+        font-size: .9rem;
+    }
+
+    /* Hero Section */
+    .headingDiv h1 {
+        font-size: 2.5rem;
+    }
+    #contactUsLink {
+        margin-left: 1rem;
+    }
+    .headingDiv a{
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+
+    /* servies */
+    .serviesInfoDiv h3 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .serviesInfoDiv p {
+        font-size: .9rem;
+        margin-bottom: 1rem;
+    }
+    .serviesInfoDiv a {
+        font-size: .9rem;
+    }
+
+    /* why choose us? */
+    .whyChooseUs h3 {
+        font-size: 1rem;
+    }
+    .whyChooseUs span{
+        font-size: 1rem;
+    }
+    .whyChooseUs p {
+        margin-top: 1rem;
+        font-size: .9rem;
+    }
+
+    /* Testimonials */
+    .review{
+        margin:3rem 0;
+    }
+    .pinfo{
+        font-size: .9rem;
+    }
+    .pname{
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .importantLinks div ul li {
+        font-size: .7rem;
+    }
+    input[type="submit"] {
+        margin-top: .5rem;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    /* resusable classes */
+    .unipadding {
+        padding: 0 7rem;
+    }
+    .commonHeading{
+        font-size: 2.1rem !important;
+    }
+
+    /* header */
+    nav ul li a {
+        font-size: .8rem;
+    }
+
+    /* hero section */
+    .headingDiv a{
+        font-size: .7rem;
+    }
+   
+}
+
+@media (max-width: 1000px) {
+    /* Reusable classes */
+    .unipadding {
+        padding: 0 5rem;
+    }
+    /* reusable classes */
+    .commonHeading{
+        font-size: 2.0rem !important;
+    }
+
+    /* header */
+    nav ul li a {
+        font-size: .7rem;
+    }
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    /* hero section */
+    .headingDiv h1 {
+        font-size: 2.2rem;
+    }
+
+    /* servies */
+    .serviesInfoDiv h3 {
+        font-size: 1rem;
+    }
+    .serviesInfoDiv p {
+        font-size: .8rem;
+    }
+    .serviesInfoDiv a {
+        font-size: .8rem;
+    }
+    .serviceImageDiv img {
+        height: 238px;
+    }
+    .servies div {
+        height: 238px;
+    }
+
+    /* Best Quality section */
+    .cleanDiv h3 {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+    .cleanDiv p {
+        font-size: .8rem;
+        margin-bottom: 3rem;
+    }
+    #qualitySectionLink {
+        margin-bottom: 3rem;
+    }
+    .button {
+        padding: 10px 40px;
+    }
+
+    /* Tesimonials */
+    .review{
+        margin:3rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .pinfo{
+        font-size: .9rem;
+    }
+    .pname{
+        font-size: 1rem;
+    }
+    /* footer */
+    .importantLinks div h2 {
+        font-size: 1rem;
+    }
+    .importantLinks div ul li {
+        font-size: .6rem;
+    }
+    .importantLinks{
+        padding-top: 4rem;
+    }
+    .copyright p{
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 900px) {
+    /* resuable classes */
+    .button {
+        padding: 9px 36px;
+    }
+
+     /* reusable classes */
+     .commonHeading{
+        font-size: 1.8rem !important;
+    }
+
+    /* hero section */
+    .headingDiv h1 {
+        font-size: 2rem;
+    }
+    .headingDiv p {
+        font-size: .6rem;
+    }
+    .headingDiv a {
+        font-size: .6rem;
+    }
+
+    /* why choose us */
+    .whyChooseUs h3 {
+        font-size: .8rem;
+    }
+    .whyChooseUs span{
+        font-size: .8rem;
+    }
+    .whyChooseUs p {
+        margin-top: 1rem;
+        font-size: .7rem;
+    }
+    .whyChooseUs {
+        margin-top: 3rem;
+    }
+    .chooseUs {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    /* Tesimonials */
+    .review{
+        margin:3rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .pinfo{
+        font-size: .8rem;
+    }
+    .pname{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 800px) {
+    /* reusable classes */
+    .unipadding {
+        padding: 0 3rem;
+    }
+    
+    .commonHeading{
+        font-size: 1.6rem !important;
+    }
+
+
+    /* header */
+    nav ul {
+        margin: 1rem 0;
+    }
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+    nav ul li a {
+        font-size: .6rem;
+    }
+    /* servies */
+    .serviesInfoDiv h3 {
+        font-size: .9rem;
+    }
+    .serviesInfoDiv p {
+        font-size: .7rem;
+    }
+    .serviesInfoDiv a {
+        font-size: .7rem;
+    }
+    .serviceImageDiv img {
+        height: 210px;
+    }
+    .servies div {
+        height: 210px;
+    }
+
+    /* Best Quality */
+    .cleanDiv h3 {
+        margin-bottom: 1.5rem;
+    }
+    .cleanDiv p {
+        font-size: .7rem;
+        margin-bottom: 2rem;
+    }
+    #qualitySectionLink {
+        margin-bottom: 2rem;
+    }
+
+    /* why choose us */
+    .whyChooseUs h3 {
+        font-size: .7rem;
+    }
+    .whyChooseUs span{
+        font-size: .7rem;
+    }
+    .whyChooseUs p {
+        margin-top: 1rem;
+        font-size: .6rem;
+    }
+    .whyChooseUs {
+        margin-top: 3rem;
+    }
+
+    /* Tesimonials */
+    .review{
+        margin:3rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .pinfo{
+        font-size: .7rem;
+    }
+    .pname{
+        font-size: .8rem;
+    }
+
+    /* footer */
+    .copyright p{
+        font-size: .8rem;
+    }
+}
+
+
+@media (max-width: 700px) {
+    /* Reusable classes */
+    .unipadding {
+        padding: 0 1rem;
+    }
+
+    .commonHeading{
+        font-size: 1.4rem !important;
+    }
+
+    /* header */
+    nav ul li a {
+        font-size: .5rem;
+    }
+
+    /* hero section */
+    .headingDiv h1 {
+        font-size: 1.5rem;
+    }
+    .headingDiv p {
+        font-size: .5rem;
+    }
+    .headingDiv a {
+        font-size: .5rem;
+    }
+
+    /* servies */
+    .serviesInfoDiv h3 {
+        font-size: .8rem;
+    }
+    .serviesInfoDiv p {
+        font-size: .6rem;
+    }
+    .serviesInfoDiv a {
+        font-size: .6rem;
+    }
+    .serviceImageDiv img {
+        height: 200px;
+    }
+    .servies div {
+        height: 200px;
+    }
+
+    /* Best Quality */
+    .cleanDiv h3 {
+        margin-bottom: 1.2rem;
+    }
+    .cleanDiv p {
+        font-size: .7rem;
+        margin-bottom:1.5rem;
+    }
+    #qualitySectionLink {
+        margin-bottom: 1.5rem;
+    }
+    .cleanDiv {
+        padding-top: 2rem;
+    }
+    .cleanDiv a{
+        font-size: .8rem;
+    }
+
+    /* why choose us */
+    .whyChooseUs h3 {
+        font-size: .6rem;
+    }
+    .whyChooseUs span{
+        font-size: .6rem;
+    }
+    .whyChooseUs p {
+        margin-top: 1rem;
+        font-size: .6rem;
+    }
+    .whyChooseUs {
+        margin-top: 3rem;
+    }
+
+
+    /* Footer */
+    .importantLinks div ul li {
+        font-size: .5rem;
+    }
+    .importantLinks div h2 {
+        font-size: .8rem;
+    }
+    .importantLinks{
+        padding-top: 2rem;
+    }
+    /* footer */
+    .copyright p{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Reusable classes */
+    .commonHeading{
+        font-size: 1.2rem !important;
+    }
+
+    /* Hero section */
+    .heroSection {
+        flex-direction: column;
+    }
+    .headingDiv, .heroImageDiv {
+        width: 100%;
+        text-align: center;
+    }
+    .headingDiv{
+        margin-bottom: 1rem;
+    }
+    .heroImageDiv img {
+        width: 100%;
+        margin-top: 1rem;
+        height: 60%;
+    }
+    .headingDiv h1 {
+        margin-top: 1rem;
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    /* Reusable classes */
+    .unipadding {
+        padding: 0 .5rem;
+    }
+
+    /* Hero section */
+    .headingDiv h1 {
+       font-size: 1rem;
+    }
+    .headingDiv p {
+        font-size: .4rem;
+    }
+    .headingDiv a {
+        font-size: .4rem;
+    }
+    .heroImageDiv img {
+        width: 75%;
+    }
+
+
+    /* Servies section */
+    
+    .ourServicesSection {
+        margin-top: 1rem;
+    }
+    .servicesParent {
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .servies {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        box-shadow: var(--box-shadow-helper);
+    }
+    #autoDetails{
+        flex-direction: column-reverse;
+    }
+    
+    .servies div {
+        height: 160px;
+    }
+    .servies div img{
+        height: 160px;
+    }
+    .serviesInfoDiv a {
+        font-size: .5rem;
+    }
+    .serviesInfoDiv p {
+        font-size: .5rem;
+    }
+    .serviesInfoDiv h3 {
+        font-size: .7rem;
+    }
+
+    /* Best Quality */
+    .cleanDiv h3 {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .cleanDiv p {
+        font-size: .6rem;
+    }
+    .cleanDiv a {
+        font-size: .7rem;
+    }
+
+    /* Why Choose Us */
+    .whyChooseUs {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .whyChooseUs div{
+        width: 70%;
+    }
+
+    /* Testimonials */
+    .profile {
+        font-size: .5rem;
+    }
+    .pinfo {
+        font-size: .6rem;
+    }
+    .pname {
+        font-size: .7rem;
+    }
+
+    /* Footer */
+    .importantLinks {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .importantLinks div {
+        width: 100%;
+        text-align: center;
+    }
+    input[type="email"]{
+        width: 70%;
+    }
+    .socials{
+        font-size: .1rem;
+    }
+    .copyright p {
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* Why choose us */
+    
+    .whyChooseUs div{
+        width: 80%;
+    }
+
+    /* Testimonials */
+    .review figure img {
+        width: 65%;
+    }
+    .profile {
+        font-size: .4rem;
+    }
+    .pinfo {
+        font-size: .5rem;
+    }
+    .pname {
+        font-size: .6rem;
+    }
+    .testimonial {
+        margin-top: 2rem;
+    }
+    .review {
+        margin: 1rem 0;
+    }
+
+    /* footer */
+    footer{
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 300px) {
+    /* Why Choose Us */
+    .whyChooseUs div{
+        width: 100%;
+    }
+
+    /* Servies */
+    .servies {
+        width: 100%;
+    }
+
+    /* Testimonials */
+    .review figure img {
+        width: 75%;
+    }
+    
+    /* Hero Section */
+    #contactUsLink {
+        margin-left: 0rem;
+    }
+    .profile {
+        font-size: .3rem;
+    }
+    .pinfo {
+        font-size: .4rem;
+    }
+    .pname {
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 200px) {
+    /* testimonials */
+}
